@@ -1,0 +1,54 @@
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999; }
+  .header .am-header-inner {
+    margin-top: -10px;
+    position: relative;
+    z-index: 2; }
+    .header .am-header-inner .mainNav {
+      height: 80px;
+      border-bottom: 1px #eeeeee solid;
+      background-color: rgba(255, 255, 255, 0.9); }
+      .header .am-header-inner .mainNav .laymid {
+        width: 1200px;
+        margin: 0 auto; }
+        .header .am-header-inner .mainNav .laymid .alipay-logo {
+          display: block;
+          width: 114px;
+          position: relative;
+          left: 80px;
+          top: 20px;
+          float: left;
+          height: 40px;
+          background-position: 0 0;
+          background-repeat: no-repeat;
+          background-image: url(https://t.alipayobjects.com/images/T1HHFgXXVeXXXXXXXX.png); }
+        .header .am-header-inner .mainNav .laymid .mainMenu {
+          height: 80px;
+          margin-left: 360px; }
+          .header .am-header-inner .mainNav .laymid .mainMenu .channel {
+            float: left;
+            height: 80px;
+            line-height: 80px;
+            position: relative; }
+            .header .am-header-inner .mainNav .laymid .mainMenu .channel .channel-a {
+              text-decoration: none;
+              color: #333;
+              font-size: 16px;
+              display: block;
+              padding: 0 30px; }
+              .header .am-header-inner .mainNav .laymid .mainMenu .channel .channel-a:hover {
+                color: #00bbee; }
+          .header .am-header-inner .mainNav .laymid .mainMenu .on .channel-a {
+            color: #00bbee; }
+
+.body .services {
+  width: 100%;
+  min-height: 480px;
+  transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  animation: scal 10s ease infinite alternate;
+  -webkit-animation: scal 10s ease infinite alternate; }

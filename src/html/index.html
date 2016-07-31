@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/index.css">
+</head>
+<body id="content">
+<div class="header">
+    <div class="am-header-inner">
+        <div class="mainNav">
+            <div class="laymid">
+                <div class="alipay-logo"></div>
+                <div id="J_mainMenu" class="mainMenu">
+                    <ul>
+                        <li class="channel" v-bind:class="{'on':$index+1===currentPage}" v-for="title in titleList">
+                            <a class="channel-a" href="javascript:;">{{title}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="body">
+    <!-- <div class="services">
+        <ul v-bind:style="{height:currentHeight+'px'}">
+            <li v-for="backImg in imgList.Servers" v-bind:style="backImg.styleObject"></li>
+        </ul>
+    </div> -->
+<carousel class="services" v-bind:style="{height:currentHeight+'px'}">
+  <slider v-for="backImg in imgList.Servers" v-bind:style="backImg.styleObject">
+  </slider>
+</carousel>
+</div>
+<script src="../scripts/main.js"></script>
+</body>
+</html>

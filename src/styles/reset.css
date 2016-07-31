@@ -4,6 +4,35 @@ KISSY CSS Reset
 特色：1.适应中文 2.基于最新主流浏览器
 */
 /* 清除内外边距 */
+html{
+	-webkit-text-size-adjust:100%;
+	-ms-text-size-adjust:100%;
+	font-size:62.5%;/*相当于10px*/
+	}
+
+html *{
+	tap-highlight-color:rgba(0,0,0,.05);/*ios的Safari浏览器的链接点击时的效果*/
+	-webkit-tap-highlight-color:rgba(0,0,0,.05);
+	-ms-tap-highlight-color:rgba(0,0,0,.05);
+	margin:0;
+	padding:0;
+	}
+body{
+	font-size:1.4rem;/*14px*/
+	font-family:"微软雅黑";
+	}
+img{-ms-interpolation-mode:bicubic;width:100%;}
+
+
+/*首页banner*/
+@keyframes scal{
+	from{-webkit-transform: scale(1,1);}
+	to{-webkit-transform: scale(1.1,1.1);}
+}
+@-webkit-keyframes scal{
+	from{-webkit-transform: scale(1,1);}
+	to{-webkit-transform: scale(1.1,1.1);}
+}
 body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
 dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
 pre, /* text formatting elements 文本格式元素 */
