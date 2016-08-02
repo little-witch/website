@@ -20,11 +20,26 @@ var vm = new Vue({
         currentHeight:HEIGHT,
         titleList:['Servers','Product','Support','About'],
         imgList:{
+            'Home':[{
+                "styleObject":{
+                    height:HEIGHT+'px',
+                    width:'100%',
+                    content: "url('../../img/Home-Slogan.JPG')",
+                    "-ms-interpolation-mode": "bicubic"
+                }
+            },{
+                "styleObject":{
+                    height:HEIGHT+'px',
+                    width:'100%',
+                    content: "url('../../img/Home-activity.JPG')",
+                    "-ms-interpolation-mode": "bicubic"
+                }
+            }],
             'Servers':[{
                 "styleObject":{
                     height:HEIGHT+'px',
                     width:'100%',
-                    content: "url('../../img/Slogan.JPG')",
+                    content: "url('../../img/Services-Embedded-Development.JPG')",
                     "-ms-interpolation-mode": "bicubic"
                 }
             },
@@ -32,20 +47,54 @@ var vm = new Vue({
                 "styleObject":{
                     height:HEIGHT+'px',
                     width:'100%',
-                    content: "url('../../img/1.jpeg')",
+                    content: "url('../../img/Services-Product-Design.jpg')",
+                    "-ms-interpolation-mode": "bicubic"
+                }
+            },{
+                "styleObject":{
+                    height:HEIGHT+'px',
+                    width:'100%',
+                    content: "url('../../img/Services-RF-Design.jpg')",
                     "-ms-interpolation-mode": "bicubic"
                 }
             }],
             'Product':[{
                 "styleObject":{
                     height:HEIGHT+'px',
-                    content: "url('../../img/1.jpeg')"
+                    width:'100%',
+                    content: "url('../../img/Product-Blood-glucose.jpg')",
+                    "-ms-interpolation-mode": "bicubic"
+                }
+            },{
+                "styleObject":{
+                    height:HEIGHT+'px',
+                    width:'100%',
+                    content: "url('../../img/Product-HVAC.jpg')",
+                    "-ms-interpolation-mode": "bicubic"
                 }
             },
             {
                 "styleObject":{
                     height:HEIGHT+'px',
-                    content: "url('../../img/2.jpeg')"
+                    width:'100%',
+                    content: "url('../../img/Product-More-to-Be-Continued.jpg')",
+                    "-ms-interpolation-mode": "bicubic"
+                }
+            }],
+            "Support":[{
+                "styleObject":{
+                    height:HEIGHT+'px',
+                    width:'100%',
+                    content: "url('../../img/Support.jpg')",
+                    "-ms-interpolation-mode": "bicubic"
+                }
+            }],
+            "About":[{
+                "styleObject":{
+                    height:HEIGHT+'px',
+                    width:'100%',
+                    content: "url('../../img/About.jpg')",
+                    "-ms-interpolation-mode": "bicubic"
                 }
             }]
         }

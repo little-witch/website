@@ -1,39 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html class="fsvs">
 <head>
     <meta charset="UTF-8">
     <title>title</title>
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/index.css">
+    <link href="../styles/fsvs.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="../scripts/common/jquery.js"></script>
+    <script src="../scripts/common/jq-migrate.js"></script>
+    <script src="../scripts/common/fsvs.js"></script>
 </head>
 <body id="content">
-<div class="header">
-    <div class="am-header-inner">
-        <div class="mainNav">
-            <div class="laymid">
-                <div class="alipay-logo"></div>
-                <div id="J_mainMenu" class="mainMenu">
-                    <ul>
-                        <li class="channel" v-bind:class="{'on':$index+1===currentPage}" v-for="title in titleList">
-                            <a class="channel-a" href="javascript:;">{{title}}</a>
-                        </li>
-                    </ul>
+    <div class="header">
+        <div class="am-header-inner">
+            <div class="mainNav">
+                <div class="laymid">
+                    <div class="alipay-logo"></div>
+                    <div id="J_mainMenu" class="mainMenu">
+                        <ul>
+                            <li class="channel" v-bind:class="{'on':$index+1===currentPage}" v-for="title in titleList">
+                                <a class="channel-a" href="javascript:;">{{title}}</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="body">
-    <!-- <div class="services">
-        <ul v-bind:style="{height:currentHeight+'px'}">
-            <li v-for="backImg in imgList.Servers" v-bind:style="backImg.styleObject"></li>
-        </ul>
-    </div> -->
-<carousel class="services" v-bind:style="{height:currentHeight+'px'}">
-  <slider v-for="backImg in imgList.Servers" v-bind:style="backImg.styleObject">
-  </slider>
-</carousel>
-</div>
+    <div class="body" id="fsvs-body">
+        <div class="slide">
+            <carousel class="home" v-bind:style="{height:currentHeight+'px'}">
+                <slider v-for="backImg in imgList.Home" v-bind:style="backImg.styleObject">
+                </slider>
+            </carousel>
+        </div>
+        <div class="slide">
+            <carousel class="services" v-bind:style="{height:currentHeight+'px'}">
+                <slider v-for="backImg in imgList.Servers" v-bind:style="backImg.styleObject">
+                </slider>
+            </carousel>
+        </div>
+        <div class="slide">
+            <carousel class="Product" v-bind:style="{height:currentHeight+'px'}">
+                <slider v-for="backImg in imgList.Product" v-bind:style="backImg.styleObject">
+                </slider>
+            </carousel>
+        </div>
+        <div class="slide">
+            <carousel class="Support" v-bind:style="{height:currentHeight+'px'}">
+                <slider v-for="backImg in imgList.Support" v-bind:style="backImg.styleObject">
+                </slider>
+            </carousel>
+        </div>
+        <div class="slide">
+            <carousel class="About" v-bind:style="{height:currentHeight+'px'}">
+                <slider v-for="backImg in imgList.About" v-bind:style="backImg.styleObject">
+                </slider>
+            </carousel>
+        </div>
+    </div>
+    <script>
+        $(document).ready( function() {
+        var fsvs = $.fn.fsvs({
+            speed : 2000,
+            bodyID : 'fsvs-body',
+            selector : '> .slide',
+            mouseSwipeDisance : 40,
+            afterSlide : function(){},
+            beforeSlide : function(){},
+            endSlide : function(){},
+            mouseWheelEvents : true,
+            mouseDragEvents : true,
+            touchEvents : true,
+            arrowKeyEvents : true,
+            pagination : true,
+            nthClasses : false,
+            detectHash : true
+        });
+    });
+    </script>
 <script src="../scripts/main.js"></script>
 </body>
 </html>
