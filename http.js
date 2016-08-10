@@ -1,4 +1,4 @@
-var PORT = 80;
+var PORT = 8081;
 
 var http = require('http');
 var url=require('url');
@@ -8,8 +8,10 @@ var path=require('path');
 
 var server = http.createServer(function (request, response) {
     var pathname = url.parse(request.url).pathname;
+    if (pathname == "/") {
+        pathname ="/html/index.html";
+    }
     var realPath = path.join("src", pathname);
-    console.log(realPath);
     var ext = path.extname(realPath);
     ext = ext ? ext.slice(1) : 'unknown';
     fs.exists(realPath, function (exists) {
