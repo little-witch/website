@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <title>title</title>
     <link rel="stylesheet" href="../styles/reset.css">
-    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../scripts/index.css">
     <link href="../styles/fsvs.css" media="all" rel="stylesheet" type="text/css"/>
-    <script src="../scripts/common/jquery.js"></script>
-    <script src="../scripts/common/jq-migrate.js"></script>
-    <script src="../scripts/common/fsvs.js"></script>
 </head>
 <body id="content">
     <div class="header">
@@ -19,7 +16,7 @@
                     <div id="J_mainMenu" class="mainMenu">
                         <ul>
                             <li class="channel" v-bind:class="{'on':$index+1===currentPage}" v-for="title in titleList">
-                                <a class="channel-a" href="javascript:;">{{title}}</a>
+                                <a class="channel-a" v-on:click="choseTitle($index)" href="javascript:;">{{title}}</a>
                             </li>
                         </ul>
                     </div>
@@ -28,57 +25,32 @@
         </div>
     </div>
     <div class="body" id="fsvs-body">
-        <div class="slide">
+        <div class="slide" v-for="item in imgList">
             <carousel class="home" v-bind:style="{height:currentHeight+'px'}">
-                <slider v-for="backImg in imgList.Home" v-bind:style="backImg.styleObject">
-                </slider>
-            </carousel>
-        </div>
-        <div class="slide">
-            <carousel class="services" v-bind:style="{height:currentHeight+'px'}">
-                <slider v-for="backImg in imgList.Servers" v-bind:style="backImg.styleObject">
-                </slider>
-            </carousel>
-        </div>
-        <div class="slide">
-            <carousel class="Product" v-bind:style="{height:currentHeight+'px'}">
-                <slider v-for="backImg in imgList.Product" v-bind:style="backImg.styleObject">
-                </slider>
-            </carousel>
-        </div>
-        <div class="slide">
-            <carousel class="Support" v-bind:style="{height:currentHeight+'px'}">
-                <slider v-for="backImg in imgList.Support" v-bind:style="backImg.styleObject">
-                </slider>
-            </carousel>
-        </div>
-        <div class="slide">
-            <carousel class="About" v-bind:style="{height:currentHeight+'px'}">
-                <slider v-for="backImg in imgList.About" v-bind:style="backImg.styleObject">
+                <slider v-for="backImg in item" v-bind:style="backImg.styleObject">
+                    <div class="body-content">
+                        <div class="topClass" v-bind:style="backImg.top.top">
+                            {{backImg.top.characte}}
+                        </div>
+                        <div class="middle middle">
+                            <div class="leftClass" v-bind:style="backImg.middle.left.left">
+                                {{backImg.middle.left.characte}}
+                            </div>
+                            <div class="middleClass middle">
+                                ffhdskjfhdsk
+                            </div>
+                            <div class="rightClass" v-bind:style="backImg.middle.right.right">
+                                {{backImg.middle.right.characte}}
+                            </div>
+                        </div>
+                        <div class="bottomClass" v-bind:style="backImg.bottom.bottom">
+                            {{backImg.bottom.characte}}
+                        </div>
+                    </div>
                 </slider>
             </carousel>
         </div>
     </div>
-    <script>
-        $(document).ready( function() {
-        var fsvs = $.fn.fsvs({
-            speed : 2000,
-            bodyID : 'fsvs-body',
-            selector : '> .slide',
-            mouseSwipeDisance : 40,
-            afterSlide : function(){},
-            beforeSlide : function(){},
-            endSlide : function(){},
-            mouseWheelEvents : true,
-            mouseDragEvents : true,
-            touchEvents : true,
-            arrowKeyEvents : true,
-            pagination : true,
-            nthClasses : false,
-            detectHash : true
-        });
-    });
-    </script>
 <script src="../scripts/main.js"></script>
 </body>
 </html>

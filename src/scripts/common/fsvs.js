@@ -6,11 +6,9 @@
 * 	Released under the MIT license:
 * 	http://www.opensource.org/licenses/mit-license.php
 */
-
+var jquery = require('jquery');
 ;( function($){
-
 	$.fn.fsvs = function( options ) {
-
 		options = options || {};
 
 		/**
@@ -20,7 +18,7 @@
 
 		var defaults = {
 			el : null,
-			speed : 5000,
+			speed : 1000,
 			autoPlay : false,
 			bodyID : 'fsvs-body',
 			mouseSwipeDisance : 40,
@@ -718,4 +716,4 @@
 
 	};
 
-})( jQuery );
+})(jquery);

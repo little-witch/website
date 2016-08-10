@@ -52,3 +52,29 @@
   -webkit-transform: scale(1, 1);
   animation: scal 10s ease infinite alternate;
   -webkit-animation: scal 10s ease infinite alternate; }
+
+.body .body-content {
+  margin: auto;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 800px;
+  height: 800px; }
+  .body .body-content .topClass {
+    padding: 0 20%;
+    text-align: center; }
+  .body .body-content .middle {
+    display: flex; }
+    .body .body-content .middle .leftClass {
+      flex: 1; }
+    .body .body-content .middle .middleClass {
+      padding: 10px;
+      flex: 4; }
+    .body .body-content .middle .rightClass {
+      flex: 1;
+      text-align: right; }
+  .body .body-content .bottomClass {
+    padding: 0 20%;
+    text-align: center; }
