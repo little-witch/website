@@ -48,14 +48,14 @@
 	 * Created by baobao on 2016/7/25.
 	 */
 	"use strict";
-	__webpack_require__(3).carousel;
-	var pageData = __webpack_require__(82);
-	var Vue = __webpack_require__(77);
-	var $jq = __webpack_require__(79);
-	__webpack_require__(80);
-	__webpack_require__(1);
-	var carousel = __webpack_require__(81).carousel;
-	var slider = __webpack_require__(81).slider;
+	__webpack_require__(1).carousel;
+	var pageData = __webpack_require__(76);
+	var Vue = __webpack_require__(80);
+	var $jq = __webpack_require__(82);
+	__webpack_require__(83);
+	__webpack_require__(84);
+	var carousel = __webpack_require__(85).carousel;
+	var slider = __webpack_require__(85).slider;
 	var HEIGHT = window.screen.height-80;
 	var vueVm = new Vue({
 	    el: '#content',
@@ -120,12 +120,129 @@
 
 /***/ },
 /* 1 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	// removed by extract-text-webpack-plugin
+	'use strict';
+
+	var normalize = __webpack_require__(2);
+	var print = __webpack_require__(6);
+	var scaffolding = __webpack_require__(8);
+	var type = __webpack_require__(10);
+	var code = __webpack_require__(12);
+	var grid = __webpack_require__(14);
+	var tables = __webpack_require__(16);
+	var forms = __webpack_require__(18);
+	var buttons = __webpack_require__(20);
+	var componentAnimations = __webpack_require__(22);
+	var dropdowns = __webpack_require__(24);
+	var buttonGroups = __webpack_require__(26);
+	var inputGroups = __webpack_require__(28);
+	var navs = __webpack_require__(30);
+	var navbar = __webpack_require__(32);
+	var breadcrumbs = __webpack_require__(34);
+	var pagination = __webpack_require__(36);
+	var pager = __webpack_require__(38);
+	var labels = __webpack_require__(40);
+	var badges = __webpack_require__(42);
+	var jumbotron = __webpack_require__(44);
+	var thumbnails = __webpack_require__(46);
+	var alerts = __webpack_require__(48);
+	var progressBars = __webpack_require__(50);
+	var media = __webpack_require__(52);
+	var listGroup = __webpack_require__(54);
+	var panels = __webpack_require__(56);
+	var responsiveEmbed = __webpack_require__(58);
+	var wells = __webpack_require__(60);
+	var close = __webpack_require__(62);
+	var modals = __webpack_require__(64);
+	var tooltip = __webpack_require__(66);
+	var popovers = __webpack_require__(68);
+	var carousel = __webpack_require__(70);
+	var utilities = __webpack_require__(72);
+	var responsiveUtilities = __webpack_require__(74);
+
+	module.exports = {
+		normalize: normalize,
+		print: print,
+		scaffolding: scaffolding,
+		type: type,
+		code: code,
+		grid: grid,
+		tables: tables,
+		forms: forms,
+		buttons: buttons,
+		componentAnimations: componentAnimations,
+		dropdowns: dropdowns,
+		buttonGroups: buttonGroups,
+		inputGroups: inputGroups,
+		navs: navs,
+		navbar: navbar,
+		breadcrumbs: breadcrumbs,
+		pagination: pagination,
+		pager: pager,
+		labels: labels,
+		badges: badges,
+		jumbotron: jumbotron,
+		thumbnails: thumbnails,
+		alerts: alerts,
+		progressBars: progressBars,
+		media: media,
+		listGroup: listGroup,
+		panels: panels,
+		responsiveEmbed: responsiveEmbed,
+		wells: wells,
+		close: close,
+		modals: modals,
+		tooltip: tooltip,
+		popovers: popovers,
+		carousel: carousel,
+		utilities: utilities,
+		responsiveUtilities: responsiveUtilities
+	};
+
 
 /***/ },
 /* 2 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(3);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../css-loader/index.js!./normalize.css", function() {
+				var newContent = require("!!./../../css-loader/index.js!./normalize.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "/*!\n * Bootstrap v3.3.6 (http://getbootstrap.com)\n * Copyright 2011-2015 Twitter, Inc.\n * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)\n */\n/* modified the import to break up the individual css components */\n/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */\nhtml {\n  font-family: sans-serif;\n  -ms-text-size-adjust: 100%;\n  -webkit-text-size-adjust: 100%;\n}\nbody {\n  margin: 0;\n}\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block;\n}\naudio,\ncanvas,\nprogress,\nvideo {\n  display: inline-block;\n  vertical-align: baseline;\n}\naudio:not([controls]) {\n  display: none;\n  height: 0;\n}\n[hidden],\ntemplate {\n  display: none;\n}\na {\n  background-color: transparent;\n}\na:active,\na:hover {\n  outline: 0;\n}\nabbr[title] {\n  border-bottom: 1px dotted;\n}\nb,\nstrong {\n  font-weight: bold;\n}\ndfn {\n  font-style: italic;\n}\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0;\n}\nmark {\n  background: #ff0;\n  color: #000;\n}\nsmall {\n  font-size: 80%;\n}\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\nsup {\n  top: -0.5em;\n}\nsub {\n  bottom: -0.25em;\n}\nimg {\n  border: 0;\n}\nsvg:not(:root) {\n  overflow: hidden;\n}\nfigure {\n  margin: 1em 40px;\n}\nhr {\n  box-sizing: content-box;\n  height: 0;\n}\npre {\n  overflow: auto;\n}\ncode,\nkbd,\npre,\nsamp {\n  font-family: monospace, monospace;\n  font-size: 1em;\n}\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  color: inherit;\n  font: inherit;\n  margin: 0;\n}\nbutton {\n  overflow: visible;\n}\nbutton,\nselect {\n  text-transform: none;\n}\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  -webkit-appearance: button;\n  cursor: pointer;\n}\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default;\n}\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  border: 0;\n  padding: 0;\n}\ninput {\n  line-height: normal;\n}\ninput[type=\"checkbox\"],\ninput[type=\"radio\"] {\n  box-sizing: border-box;\n  padding: 0;\n}\ninput[type=\"number\"]::-webkit-inner-spin-button,\ninput[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto;\n}\ninput[type=\"search\"] {\n  -webkit-appearance: textfield;\n  box-sizing: content-box;\n}\ninput[type=\"search\"]::-webkit-search-cancel-button,\ninput[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em;\n}\nlegend {\n  border: 0;\n  padding: 0;\n}\ntextarea {\n  overflow: auto;\n}\noptgroup {\n  font-weight: bold;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\ntd,\nth {\n  padding: 0;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 4 */
 /***/ function(module, exports) {
 
 	/*
@@ -181,130 +298,7 @@
 
 
 /***/ },
-/* 3 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var normalize = __webpack_require__(4);
-	var print = __webpack_require__(7);
-	var scaffolding = __webpack_require__(9);
-	var type = __webpack_require__(11);
-	var code = __webpack_require__(13);
-	var grid = __webpack_require__(15);
-	var tables = __webpack_require__(17);
-	var forms = __webpack_require__(19);
-	var buttons = __webpack_require__(21);
-	var componentAnimations = __webpack_require__(23);
-	var dropdowns = __webpack_require__(25);
-	var buttonGroups = __webpack_require__(27);
-	var inputGroups = __webpack_require__(29);
-	var navs = __webpack_require__(31);
-	var navbar = __webpack_require__(33);
-	var breadcrumbs = __webpack_require__(35);
-	var pagination = __webpack_require__(37);
-	var pager = __webpack_require__(39);
-	var labels = __webpack_require__(41);
-	var badges = __webpack_require__(43);
-	var jumbotron = __webpack_require__(45);
-	var thumbnails = __webpack_require__(47);
-	var alerts = __webpack_require__(49);
-	var progressBars = __webpack_require__(51);
-	var media = __webpack_require__(53);
-	var listGroup = __webpack_require__(55);
-	var panels = __webpack_require__(57);
-	var responsiveEmbed = __webpack_require__(59);
-	var wells = __webpack_require__(61);
-	var close = __webpack_require__(63);
-	var modals = __webpack_require__(65);
-	var tooltip = __webpack_require__(67);
-	var popovers = __webpack_require__(69);
-	var carousel = __webpack_require__(71);
-	var utilities = __webpack_require__(73);
-	var responsiveUtilities = __webpack_require__(75);
-
-	module.exports = {
-		normalize: normalize,
-		print: print,
-		scaffolding: scaffolding,
-		type: type,
-		code: code,
-		grid: grid,
-		tables: tables,
-		forms: forms,
-		buttons: buttons,
-		componentAnimations: componentAnimations,
-		dropdowns: dropdowns,
-		buttonGroups: buttonGroups,
-		inputGroups: inputGroups,
-		navs: navs,
-		navbar: navbar,
-		breadcrumbs: breadcrumbs,
-		pagination: pagination,
-		pager: pager,
-		labels: labels,
-		badges: badges,
-		jumbotron: jumbotron,
-		thumbnails: thumbnails,
-		alerts: alerts,
-		progressBars: progressBars,
-		media: media,
-		listGroup: listGroup,
-		panels: panels,
-		responsiveEmbed: responsiveEmbed,
-		wells: wells,
-		close: close,
-		modals: modals,
-		tooltip: tooltip,
-		popovers: popovers,
-		carousel: carousel,
-		utilities: utilities,
-		responsiveUtilities: responsiveUtilities
-	};
-
-
-/***/ },
-/* 4 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(5);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../css-loader/index.js!./normalize.css", function() {
-				var newContent = require("!!./../../css-loader/index.js!./normalize.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
 /* 5 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(2)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "/*!\n * Bootstrap v3.3.6 (http://getbootstrap.com)\n * Copyright 2011-2015 Twitter, Inc.\n * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)\n */\n/* modified the import to break up the individual css components */\n/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */\nhtml {\n  font-family: sans-serif;\n  -ms-text-size-adjust: 100%;\n  -webkit-text-size-adjust: 100%;\n}\nbody {\n  margin: 0;\n}\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block;\n}\naudio,\ncanvas,\nprogress,\nvideo {\n  display: inline-block;\n  vertical-align: baseline;\n}\naudio:not([controls]) {\n  display: none;\n  height: 0;\n}\n[hidden],\ntemplate {\n  display: none;\n}\na {\n  background-color: transparent;\n}\na:active,\na:hover {\n  outline: 0;\n}\nabbr[title] {\n  border-bottom: 1px dotted;\n}\nb,\nstrong {\n  font-weight: bold;\n}\ndfn {\n  font-style: italic;\n}\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0;\n}\nmark {\n  background: #ff0;\n  color: #000;\n}\nsmall {\n  font-size: 80%;\n}\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\nsup {\n  top: -0.5em;\n}\nsub {\n  bottom: -0.25em;\n}\nimg {\n  border: 0;\n}\nsvg:not(:root) {\n  overflow: hidden;\n}\nfigure {\n  margin: 1em 40px;\n}\nhr {\n  box-sizing: content-box;\n  height: 0;\n}\npre {\n  overflow: auto;\n}\ncode,\nkbd,\npre,\nsamp {\n  font-family: monospace, monospace;\n  font-size: 1em;\n}\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  color: inherit;\n  font: inherit;\n  margin: 0;\n}\nbutton {\n  overflow: visible;\n}\nbutton,\nselect {\n  text-transform: none;\n}\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  -webkit-appearance: button;\n  cursor: pointer;\n}\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default;\n}\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  border: 0;\n  padding: 0;\n}\ninput {\n  line-height: normal;\n}\ninput[type=\"checkbox\"],\ninput[type=\"radio\"] {\n  box-sizing: border-box;\n  padding: 0;\n}\ninput[type=\"number\"]::-webkit-inner-spin-button,\ninput[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto;\n}\ninput[type=\"search\"] {\n  -webkit-appearance: textfield;\n  box-sizing: content-box;\n}\ninput[type=\"search\"]::-webkit-search-cancel-button,\ninput[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em;\n}\nlegend {\n  border: 0;\n  padding: 0;\n}\ntextarea {\n  overflow: auto;\n}\noptgroup {\n  font-weight: bold;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\ntd,\nth {\n  padding: 0;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -556,16 +550,16 @@
 
 
 /***/ },
-/* 7 */
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(8);
+	var content = __webpack_require__(7);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -582,10 +576,10 @@
 	}
 
 /***/ },
-/* 8 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -596,16 +590,16 @@
 
 
 /***/ },
-/* 9 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(10);
+	var content = __webpack_require__(9);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -622,10 +616,10 @@
 	}
 
 /***/ },
-/* 10 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -636,16 +630,16 @@
 
 
 /***/ },
-/* 11 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(12);
+	var content = __webpack_require__(11);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -662,10 +656,10 @@
 	}
 
 /***/ },
-/* 12 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -676,16 +670,16 @@
 
 
 /***/ },
-/* 13 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(14);
+	var content = __webpack_require__(13);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -702,10 +696,10 @@
 	}
 
 /***/ },
-/* 14 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -716,16 +710,16 @@
 
 
 /***/ },
-/* 15 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(16);
+	var content = __webpack_require__(15);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -742,10 +736,10 @@
 	}
 
 /***/ },
-/* 16 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -756,16 +750,16 @@
 
 
 /***/ },
-/* 17 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(18);
+	var content = __webpack_require__(17);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -782,10 +776,10 @@
 	}
 
 /***/ },
-/* 18 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -796,16 +790,16 @@
 
 
 /***/ },
-/* 19 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(20);
+	var content = __webpack_require__(19);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -822,10 +816,10 @@
 	}
 
 /***/ },
-/* 20 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -836,16 +830,16 @@
 
 
 /***/ },
-/* 21 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(22);
+	var content = __webpack_require__(21);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -862,10 +856,10 @@
 	}
 
 /***/ },
-/* 22 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -876,16 +870,16 @@
 
 
 /***/ },
-/* 23 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(24);
+	var content = __webpack_require__(23);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -902,10 +896,10 @@
 	}
 
 /***/ },
-/* 24 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -916,16 +910,16 @@
 
 
 /***/ },
-/* 25 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(26);
+	var content = __webpack_require__(25);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -942,10 +936,10 @@
 	}
 
 /***/ },
-/* 26 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -956,16 +950,16 @@
 
 
 /***/ },
-/* 27 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(28);
+	var content = __webpack_require__(27);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -982,10 +976,10 @@
 	}
 
 /***/ },
-/* 28 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -996,16 +990,16 @@
 
 
 /***/ },
-/* 29 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(30);
+	var content = __webpack_require__(29);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1022,10 +1016,10 @@
 	}
 
 /***/ },
-/* 30 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -1036,16 +1030,16 @@
 
 
 /***/ },
-/* 31 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(32);
+	var content = __webpack_require__(31);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1062,10 +1056,10 @@
 	}
 
 /***/ },
-/* 32 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -1076,16 +1070,16 @@
 
 
 /***/ },
-/* 33 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(34);
+	var content = __webpack_require__(33);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1102,10 +1096,10 @@
 	}
 
 /***/ },
-/* 34 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -1116,16 +1110,16 @@
 
 
 /***/ },
-/* 35 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(36);
+	var content = __webpack_require__(35);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1142,10 +1136,10 @@
 	}
 
 /***/ },
-/* 36 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -1156,16 +1150,16 @@
 
 
 /***/ },
-/* 37 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(38);
+	var content = __webpack_require__(37);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1182,10 +1176,10 @@
 	}
 
 /***/ },
-/* 38 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -1196,16 +1190,16 @@
 
 
 /***/ },
-/* 39 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(40);
+	var content = __webpack_require__(39);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1222,10 +1216,10 @@
 	}
 
 /***/ },
-/* 40 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -1236,16 +1230,16 @@
 
 
 /***/ },
-/* 41 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(42);
+	var content = __webpack_require__(41);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1262,10 +1256,10 @@
 	}
 
 /***/ },
-/* 42 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -1276,16 +1270,16 @@
 
 
 /***/ },
-/* 43 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(44);
+	var content = __webpack_require__(43);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1302,10 +1296,10 @@
 	}
 
 /***/ },
-/* 44 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -1316,16 +1310,16 @@
 
 
 /***/ },
-/* 45 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(46);
+	var content = __webpack_require__(45);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1342,10 +1336,10 @@
 	}
 
 /***/ },
-/* 46 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -1356,16 +1350,16 @@
 
 
 /***/ },
-/* 47 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(48);
+	var content = __webpack_require__(47);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1382,10 +1376,10 @@
 	}
 
 /***/ },
-/* 48 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -1396,16 +1390,16 @@
 
 
 /***/ },
-/* 49 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(50);
+	var content = __webpack_require__(49);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1422,10 +1416,10 @@
 	}
 
 /***/ },
-/* 50 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -1436,16 +1430,16 @@
 
 
 /***/ },
-/* 51 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(52);
+	var content = __webpack_require__(51);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1462,10 +1456,10 @@
 	}
 
 /***/ },
-/* 52 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -1476,16 +1470,16 @@
 
 
 /***/ },
-/* 53 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(54);
+	var content = __webpack_require__(53);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1502,10 +1496,10 @@
 	}
 
 /***/ },
-/* 54 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -1516,16 +1510,16 @@
 
 
 /***/ },
-/* 55 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(56);
+	var content = __webpack_require__(55);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1542,10 +1536,10 @@
 	}
 
 /***/ },
-/* 56 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -1556,16 +1550,16 @@
 
 
 /***/ },
-/* 57 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(58);
+	var content = __webpack_require__(57);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1582,10 +1576,10 @@
 	}
 
 /***/ },
-/* 58 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -1596,16 +1590,16 @@
 
 
 /***/ },
-/* 59 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(60);
+	var content = __webpack_require__(59);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1622,10 +1616,10 @@
 	}
 
 /***/ },
-/* 60 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -1636,16 +1630,16 @@
 
 
 /***/ },
-/* 61 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(62);
+	var content = __webpack_require__(61);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1662,10 +1656,10 @@
 	}
 
 /***/ },
-/* 62 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -1676,16 +1670,16 @@
 
 
 /***/ },
-/* 63 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(64);
+	var content = __webpack_require__(63);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1702,10 +1696,10 @@
 	}
 
 /***/ },
-/* 64 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -1716,16 +1710,16 @@
 
 
 /***/ },
-/* 65 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(66);
+	var content = __webpack_require__(65);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1742,10 +1736,10 @@
 	}
 
 /***/ },
-/* 66 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -1756,16 +1750,16 @@
 
 
 /***/ },
-/* 67 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(68);
+	var content = __webpack_require__(67);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1782,10 +1776,10 @@
 	}
 
 /***/ },
-/* 68 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -1796,16 +1790,16 @@
 
 
 /***/ },
-/* 69 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(70);
+	var content = __webpack_require__(69);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1822,10 +1816,10 @@
 	}
 
 /***/ },
-/* 70 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -1836,16 +1830,16 @@
 
 
 /***/ },
-/* 71 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(72);
+	var content = __webpack_require__(71);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1862,10 +1856,10 @@
 	}
 
 /***/ },
-/* 72 */
+/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -1876,16 +1870,16 @@
 
 
 /***/ },
-/* 73 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(74);
+	var content = __webpack_require__(73);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1902,10 +1896,10 @@
 	}
 
 /***/ },
-/* 74 */
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -1916,16 +1910,16 @@
 
 
 /***/ },
-/* 75 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(76);
+	var content = __webpack_require__(75);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(5)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -1942,10 +1936,10 @@
 	}
 
 /***/ },
-/* 76 */
+/* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(2)();
+	exports = module.exports = __webpack_require__(4)();
 	// imports
 
 
@@ -1956,7 +1950,479 @@
 
 
 /***/ },
-/* 77 */
+/* 76 */
+/***/ function(module, exports) {
+
+	var HEIGHT = window.screen.height-80;
+	var pageData = {
+	    imgList:[
+	        [{
+	            "styleObject":{
+	                height:HEIGHT+'px',
+	                width:'100%',
+	                "background-image": "url('../../img/Home-Slogan.JPG')",
+	                "background-size":"100% 100%",
+	                "-ms-interpolation-mode": "bicubic"
+	            },
+	            "top":{
+	                "characte":"这里是上面汉字",
+	                "top":{
+	                    'font-size':'16px',
+	                    'color':'#666666'
+
+	                }
+	            },
+	            "middle":{
+	                "left":{
+	                    "characte":"这里是左面汉字",
+	                    "left":{
+	                        'font-size':'16px',
+	                        'color':'#666666'
+
+	                    }
+	                },
+	                "middle":{
+
+	                },
+	                "right":{
+	                    "characte":"这里是you面汉字",
+	                    "right":{
+	                        'font-size':'16px',
+	                        'color':'#666666'
+
+	                    }
+	                }
+	            },
+	            "bottom":{
+	                "characte":"这里是xia面汉字",
+	                "bottom":{
+	                    'font-size':'16px',
+	                    'color':'#666666'
+
+	                }
+	            }
+	        },{
+	            "styleObject":{
+	                height:HEIGHT+'px',
+	                width:'100%',
+	                "background-image": "url('../../img/Home-activity.JPG')",
+	                "background-size":"100% 100%",
+	                "-ms-interpolation-mode": "bicubic"
+	            },
+	            "top":{
+	                "characte":"这里是上面汉字",
+	                "top":{
+	                    'font-size':'16px',
+	                    'color':'#666666'
+
+	                }
+	            },
+	            "middle":{
+	                "left":{
+	                    "characte":"这里是左面汉字",
+	                    "left":{
+	                        'font-size':'16px',
+	                        'color':'#666666'
+
+	                    }
+	                },
+	                "middle":{
+
+	                },
+	                "right":{
+	                    "characte":"这里是you面汉字",
+	                    "right":{
+	                        'font-size':'16px',
+	                        'color':'#666666'
+
+	                    }
+	                }
+	            },
+	            "bottom":{
+	                "characte":"这里是xia面汉字",
+	                "bottom":{
+	                    'font-size':'16px',
+	                    'color':'#666666'
+
+	                }
+	            }
+	        }],
+	        [{
+	            "styleObject":{
+	                height:HEIGHT+'px',
+	                width:'100%',
+	                "background-image": "url('../../img/Services-Embedded-Development.JPG')",
+	                "background-size":"100% 100%",
+	                "-ms-interpolation-mode": "bicubic"
+	            },
+	            "top":{
+	                "characte":"这里是上面汉字",
+	                "top":{
+	                    'font-size':'16px',
+	                    'color':'#666666'
+
+	                }
+	            },
+	            "middle":{
+	                "left":{
+	                    "characte":"这里是左面汉字",
+	                    "left":{
+	                        'font-size':'16px',
+	                        'color':'#666666'
+
+	                    }
+	                },
+	                "middle":{
+
+	                },
+	                "right":{
+	                    "characte":"这里是you面汉字",
+	                    "right":{
+	                        'font-size':'16px',
+	                        'color':'#666666'
+
+	                    }
+	                }
+	            },
+	            "bottom":{
+	                "characte":"这里是xia面汉字",
+	                "bottom":{
+	                    'font-size':'16px',
+	                    'color':'#666666'
+
+	                }
+	            }
+	        },
+	        {
+	            "styleObject":{
+	                height:HEIGHT+'px',
+	                width:'100%',
+	                "background-image": "url('../../img/Services-Product-Design.jpg')",
+	                "background-size":"100% 100%",
+	                "-ms-interpolation-mode": "bicubic"
+	            },
+	            "top":{
+	                "characte":"这里是上面汉字",
+	                "top":{
+	                    'font-size':'16px',
+	                    'color':'#666666'
+
+	                }
+	            },
+	            "middle":{
+	                "left":{
+	                    "characte":"这里是左面汉字",
+	                    "left":{
+	                        'font-size':'16px',
+	                        'color':'#666666'
+
+	                    }
+	                },
+	                "middle":{
+
+	                },
+	                "right":{
+	                    "characte":"这里是you面汉字",
+	                    "right":{
+	                        'font-size':'16px',
+	                        'color':'#666666'
+
+	                    }
+	                }
+	            },
+	            "bottom":{
+	                "characte":"这里是xia面汉字",
+	                "bottom":{
+	                    'font-size':'16px',
+	                    'color':'#666666'
+
+	                }
+	            }
+	        },{
+	            "styleObject":{
+	                height:HEIGHT+'px',
+	                width:'100%',
+	                "background-image": "url('../../img/Services-RF-Design.jpg')",
+	                "background-size":"100% 100%",
+	                "-ms-interpolation-mode": "bicubic"
+	            },
+	            "top":{
+	                "characte":"这里是上面汉字",
+	                "top":{
+	                    'font-size':'16px',
+	                    'color':'#666666'
+
+	                }
+	            },
+	            "middle":{
+	                "left":{
+	                    "characte":"这里是左面汉字",
+	                    "left":{
+	                        'font-size':'16px',
+	                        'color':'#666666'
+
+	                    }
+	                },
+	                "middle":{
+
+	                },
+	                "right":{
+	                    "characte":"这里是you面汉字",
+	                    "right":{
+	                        'font-size':'16px',
+	                        'color':'#666666'
+
+	                    }
+	                }
+	            },
+	            "bottom":{
+	                "characte":"这里是xia面汉字",
+	                "bottom":{
+	                    'font-size':'16px',
+	                    'color':'#666666'
+
+	                }
+	            }
+	        }],
+	        [{
+	            "styleObject":{
+	                height:HEIGHT+'px',
+	                width:'100%',
+	                "background-image": "url('../../img/Product-Blood-glucose.jpg')",
+	                "background-size":"100% 100%",
+	                "-ms-interpolation-mode": "bicubic"
+	            },
+	            "top":{
+	                "characte":"这里是上面汉字",
+	                "top":{
+	                    'font-size':'16px',
+	                    'color':'#666666'
+
+	                }
+	            },
+	            "middle":{
+	                "left":{
+	                    "characte":"这里是左面汉字",
+	                    "left":{
+	                        'font-size':'16px',
+	                        'color':'#666666'
+
+	                    }
+	                },
+	                "middle":{
+
+	                },
+	                "right":{
+	                    "characte":"这里是you面汉字",
+	                    "right":{
+	                        'font-size':'16px',
+	                        'color':'#666666'
+
+	                    }
+	                }
+	            },
+	            "bottom":{
+	                "characte":"这里是xia面汉字",
+	                "bottom":{
+	                    'font-size':'16px',
+	                    'color':'#666666'
+
+	                }
+	            }
+	        },{
+	            "styleObject":{
+	                height:HEIGHT+'px',
+	                width:'100%',
+	                "background-image": "url('../../img/Product-HVAC.jpg')",
+	                "background-size":"100% 100%",
+	                "-ms-interpolation-mode": "bicubic"
+	            },
+	            "top":{
+	                "characte":"这里是上面汉字",
+	                "top":{
+	                    'font-size':'16px',
+	                    'color':'#666666'
+
+	                }
+	            },
+	            "middle":{
+	                "left":{
+	                    "characte":"这里是左面汉字",
+	                    "left":{
+	                        'font-size':'16px',
+	                        'color':'#666666'
+
+	                    }
+	                },
+	                "middle":{
+
+	                },
+	                "right":{
+	                    "characte":"这里是you面汉字",
+	                    "right":{
+	                        'font-size':'16px',
+	                        'color':'#666666'
+
+	                    }
+	                }
+	            },
+	            "bottom":{
+	                "characte":"这里是xia面汉字",
+	                "bottom":{
+	                    'font-size':'16px',
+	                    'color':'#666666'
+
+	                }
+	            }
+	        },
+	        {
+	            "styleObject":{
+	                height:HEIGHT+'px',
+	                width:'100%',
+	                "background-image": "url('../../img/Product-More-to-Be-Continued.jpg')",
+	                "background-size":"100% 100%",
+	                "-ms-interpolation-mode": "bicubic"
+	            },
+	            "top":{
+	                "characte":"这里是上面汉字",
+	                "top":{
+	                    'font-size':'16px',
+	                    'color':'#666666'
+
+	                }
+	            },
+	            "middle":{
+	                "left":{
+	                    "characte":"这里是左面汉字",
+	                    "left":{
+	                        'font-size':'16px',
+	                        'color':'#666666'
+
+	                    }
+	                },
+	                "middle":{
+
+	                },
+	                "right":{
+	                    "characte":"这里是you面汉字",
+	                    "right":{
+	                        'font-size':'16px',
+	                        'color':'#666666'
+
+	                    }
+	                }
+	            },
+	            "bottom":{
+	                "characte":"这里是xia面汉字",
+	                "bottom":{
+	                    'font-size':'16px',
+	                    'color':'#666666'
+
+	                }
+	            }
+	        }],
+	        [{
+	            "styleObject":{
+	                height:HEIGHT+'px',
+	                width:'100%',
+	                "background-image": "url('../../img/Support.jpg')",
+	                "background-size":"100% 100%",
+	                "-ms-interpolation-mode": "bicubic"
+	            },
+	            "top":{
+	                "characte":"这里是上面汉字",
+	                "top":{
+	                    'font-size':'16px',
+	                    'color':'#666666'
+
+	                }
+	            },
+	            "middle":{
+	                "left":{
+	                    "characte":"这里是左面汉字",
+	                    "left":{
+	                        'font-size':'16px',
+	                        'color':'#666666'
+
+	                    }
+	                },
+	                "middle":{
+
+	                },
+	                "right":{
+	                    "characte":"这里是you面汉字",
+	                    "right":{
+	                        'font-size':'16px',
+	                        'color':'#666666'
+
+	                    }
+	                }
+	            },
+	            "bottom":{
+	                "characte":"这里是xia面汉字",
+	                "bottom":{
+	                    'font-size':'16px',
+	                    'color':'#666666'
+
+	                }
+	            }
+	        }],
+	        [{
+	            "styleObject":{
+	                height:HEIGHT+'px',
+	                width:'100%',
+	                "background-image": "url('../../img/About.jpg')",
+	                "background-size":"100% 100%",
+	                "-ms-interpolation-mode": "bicubic"
+	            },
+	            "top":{
+	                "characte":"",
+	                "top":{
+	                    'font-size':'16px',
+	                    'color':'#666666'
+
+	                }
+	            },
+	            "middle":{
+	                "left":{
+	                    "characte":"这里是左面汉字",
+	                    "left":{
+	                        'font-size':'16px',
+	                        'color':'#666666'
+
+	                    }
+	                },
+	                "middle":{
+
+	                },
+	                "right":{
+	                    "characte":"这里是you面汉字",
+	                    "right":{
+	                        'font-size':'16px',
+	                        'color':'#666666'
+
+	                    }
+	                }
+	            },
+	            "bottom":{
+	                "characte":"这里是xia面汉字",
+	                "bottom":{
+	                    'font-size':'16px',
+	                    'color':'#666666'
+
+	                }
+	            }
+	        }]
+	    ]
+	}
+	module.exports = pageData;
+
+
+/***/ },
+/* 77 */,
+/* 78 */,
+/* 79 */,
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global, process) {/*!
@@ -12033,10 +12499,10 @@
 	}, 0);
 
 	module.exports = Vue;
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(78)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(81)))
 
 /***/ },
-/* 78 */
+/* 81 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -12161,7 +12627,7 @@
 
 
 /***/ },
-/* 79 */
+/* 82 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*eslint-disable no-unused-vars*/
@@ -22241,7 +22707,7 @@
 
 
 /***/ },
-/* 80 */
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -22252,7 +22718,7 @@
 	* 	Released under the MIT license:
 	* 	http://www.opensource.org/licenses/mit-license.php
 	*/
-	var jquery = __webpack_require__(79);
+	var jquery = __webpack_require__(82);
 	;( function($){
 		$.fn.fsvs = function( options ) {
 			options = options || {};
@@ -22966,7 +23432,13 @@
 
 
 /***/ },
-/* 81 */
+/* 84 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 85 */
 /***/ function(module, exports, __webpack_require__) {
 
 	(function webpackUniversalModuleDefinition(root, factory) {
@@ -28905,475 +29377,6 @@
 	});
 	;
 	//# sourceMappingURL=vue-strap.js.map
-
-/***/ },
-/* 82 */
-/***/ function(module, exports) {
-
-	var HEIGHT = window.screen.height-80;
-	var pageData = {
-	    imgList:[
-	        [{
-	            "styleObject":{
-	                height:HEIGHT+'px',
-	                width:'100%',
-	                "background-image": "url('../../img/Home-Slogan.JPG')",
-	                "background-size":"100% 100%",
-	                "-ms-interpolation-mode": "bicubic"
-	            },
-	            "top":{
-	                "characte":"这里是上面汉字",
-	                "top":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            },
-	            "middle":{
-	                "left":{
-	                    "characte":"这里是左面汉字",
-	                    "left":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                },
-	                "middle":{
-
-	                },
-	                "right":{
-	                    "characte":"这里是you面汉字",
-	                    "right":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                }
-	            },
-	            "bottom":{
-	                "characte":"这里是xia面汉字",
-	                "bottom":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            }
-	        },{
-	            "styleObject":{
-	                height:HEIGHT+'px',
-	                width:'100%',
-	                "background-image": "url('../../img/Home-activity.JPG')",
-	                "background-size":"100% 100%",
-	                "-ms-interpolation-mode": "bicubic"
-	            },
-	            "top":{
-	                "characte":"这里是上面汉字",
-	                "top":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            },
-	            "middle":{
-	                "left":{
-	                    "characte":"这里是左面汉字",
-	                    "left":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                },
-	                "middle":{
-
-	                },
-	                "right":{
-	                    "characte":"这里是you面汉字",
-	                    "right":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                }
-	            },
-	            "bottom":{
-	                "characte":"这里是xia面汉字",
-	                "bottom":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            }
-	        }],
-	        [{
-	            "styleObject":{
-	                height:HEIGHT+'px',
-	                width:'100%',
-	                "background-image": "url('../../img/Services-Embedded-Development.JPG')",
-	                "background-size":"100% 100%",
-	                "-ms-interpolation-mode": "bicubic"
-	            },
-	            "top":{
-	                "characte":"这里是上面汉字",
-	                "top":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            },
-	            "middle":{
-	                "left":{
-	                    "characte":"这里是左面汉字",
-	                    "left":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                },
-	                "middle":{
-
-	                },
-	                "right":{
-	                    "characte":"这里是you面汉字",
-	                    "right":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                }
-	            },
-	            "bottom":{
-	                "characte":"这里是xia面汉字",
-	                "bottom":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            }
-	        },
-	        {
-	            "styleObject":{
-	                height:HEIGHT+'px',
-	                width:'100%',
-	                "background-image": "url('../../img/Services-Product-Design.jpg')",
-	                "background-size":"100% 100%",
-	                "-ms-interpolation-mode": "bicubic"
-	            },
-	            "top":{
-	                "characte":"这里是上面汉字",
-	                "top":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            },
-	            "middle":{
-	                "left":{
-	                    "characte":"这里是左面汉字",
-	                    "left":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                },
-	                "middle":{
-
-	                },
-	                "right":{
-	                    "characte":"这里是you面汉字",
-	                    "right":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                }
-	            },
-	            "bottom":{
-	                "characte":"这里是xia面汉字",
-	                "bottom":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            }
-	        },{
-	            "styleObject":{
-	                height:HEIGHT+'px',
-	                width:'100%',
-	                "background-image": "url('../../img/Services-RF-Design.jpg')",
-	                "background-size":"100% 100%",
-	                "-ms-interpolation-mode": "bicubic"
-	            },
-	            "top":{
-	                "characte":"这里是上面汉字",
-	                "top":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            },
-	            "middle":{
-	                "left":{
-	                    "characte":"这里是左面汉字",
-	                    "left":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                },
-	                "middle":{
-
-	                },
-	                "right":{
-	                    "characte":"这里是you面汉字",
-	                    "right":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                }
-	            },
-	            "bottom":{
-	                "characte":"这里是xia面汉字",
-	                "bottom":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            }
-	        }],
-	        [{
-	            "styleObject":{
-	                height:HEIGHT+'px',
-	                width:'100%',
-	                "background-image": "url('../../img/Product-Blood-glucose.jpg')",
-	                "background-size":"100% 100%",
-	                "-ms-interpolation-mode": "bicubic"
-	            },
-	            "top":{
-	                "characte":"这里是上面汉字",
-	                "top":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            },
-	            "middle":{
-	                "left":{
-	                    "characte":"这里是左面汉字",
-	                    "left":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                },
-	                "middle":{
-
-	                },
-	                "right":{
-	                    "characte":"这里是you面汉字",
-	                    "right":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                }
-	            },
-	            "bottom":{
-	                "characte":"这里是xia面汉字",
-	                "bottom":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            }
-	        },{
-	            "styleObject":{
-	                height:HEIGHT+'px',
-	                width:'100%',
-	                "background-image": "url('../../img/Product-HVAC.jpg')",
-	                "background-size":"100% 100%",
-	                "-ms-interpolation-mode": "bicubic"
-	            },
-	            "top":{
-	                "characte":"这里是上面汉字",
-	                "top":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            },
-	            "middle":{
-	                "left":{
-	                    "characte":"这里是左面汉字",
-	                    "left":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                },
-	                "middle":{
-
-	                },
-	                "right":{
-	                    "characte":"这里是you面汉字",
-	                    "right":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                }
-	            },
-	            "bottom":{
-	                "characte":"这里是xia面汉字",
-	                "bottom":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            }
-	        },
-	        {
-	            "styleObject":{
-	                height:HEIGHT+'px',
-	                width:'100%',
-	                "background-image": "url('../../img/Product-More-to-Be-Continued.jpg')",
-	                "background-size":"100% 100%",
-	                "-ms-interpolation-mode": "bicubic"
-	            },
-	            "top":{
-	                "characte":"这里是上面汉字",
-	                "top":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            },
-	            "middle":{
-	                "left":{
-	                    "characte":"这里是左面汉字",
-	                    "left":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                },
-	                "middle":{
-
-	                },
-	                "right":{
-	                    "characte":"这里是you面汉字",
-	                    "right":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                }
-	            },
-	            "bottom":{
-	                "characte":"这里是xia面汉字",
-	                "bottom":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            }
-	        }],
-	        [{
-	            "styleObject":{
-	                height:HEIGHT+'px',
-	                width:'100%',
-	                "background-image": "url('../../img/Support.jpg')",
-	                "background-size":"100% 100%",
-	                "-ms-interpolation-mode": "bicubic"
-	            },
-	            "top":{
-	                "characte":"这里是上面汉字",
-	                "top":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            },
-	            "middle":{
-	                "left":{
-	                    "characte":"这里是左面汉字",
-	                    "left":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                },
-	                "middle":{
-
-	                },
-	                "right":{
-	                    "characte":"这里是you面汉字",
-	                    "right":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                }
-	            },
-	            "bottom":{
-	                "characte":"这里是xia面汉字",
-	                "bottom":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            }
-	        }],
-	        [{
-	            "styleObject":{
-	                height:HEIGHT+'px',
-	                width:'100%',
-	                "background-image": "url('../../img/About.jpg')",
-	                "background-size":"100% 100%",
-	                "-ms-interpolation-mode": "bicubic"
-	            },
-	            "top":{
-	                "characte":"",
-	                "top":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            },
-	            "middle":{
-	                "left":{
-	                    "characte":"这里是左面汉字",
-	                    "left":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                },
-	                "middle":{
-
-	                },
-	                "right":{
-	                    "characte":"这里是you面汉字",
-	                    "right":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                }
-	            },
-	            "bottom":{
-	                "characte":"这里是xia面汉字",
-	                "bottom":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            }
-	        }]
-	    ]
-	}
-	module.exports = pageData;
-
 
 /***/ }
 /******/ ]);
