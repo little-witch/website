@@ -80,7 +80,7 @@
       left: 0;
       right:0;
       bottom: 0;
-      width: 800px;
+      width: 1000px;
       height: 800px;
       .topClass{
           padding: 0 20%;
@@ -95,6 +95,10 @@
           .middleClass{
               padding: 10px;
               flex: 4;
+              .video-js{
+                  width: 800px;
+                  height:450px;
+              }
           }
           .rightClass{
                flex: 1;

@@ -27,7 +27,8 @@ var pageData = {
                     }
                 },
                 "middle":{
-
+                    "isVideo":true,
+                    "srcVideo":"../video/test1.mp4"
                 },
                 "right":{
                     "characte":"这里是you面汉字",
@@ -68,11 +69,15 @@ var pageData = {
                     "left":{
                         'font-size':'16px',
                         'color':'#666666'
-
                     }
                 },
                 "middle":{
-
+                    "isVideo":false,
+                    "characte":"中间的字hiahiahiahia",
+                    "middle":{
+                        'font-size':'16px',
+                        'color':'#333333'
+                    }
                 },
                 "right":{
                     "characte":"这里是you面汉字",

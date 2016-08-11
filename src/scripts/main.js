@@ -50,12 +50,12 @@
 	"use strict";
 	__webpack_require__(1).carousel;
 	var pageData = __webpack_require__(76);
-	var Vue = __webpack_require__(80);
-	var $jq = __webpack_require__(82);
-	__webpack_require__(83);
-	__webpack_require__(84);
-	var carousel = __webpack_require__(85).carousel;
-	var slider = __webpack_require__(85).slider;
+	var Vue = __webpack_require__(77);
+	var $jq = __webpack_require__(79);
+	__webpack_require__(80);
+	__webpack_require__(81);
+	var carousel = __webpack_require__(82).carousel;
+	var slider = __webpack_require__(82).slider;
 	var HEIGHT = window.screen.height-80;
 	var vueVm = new Vue({
 	    el: '#content',
@@ -1982,7 +1982,8 @@
 	                    }
 	                },
 	                "middle":{
-
+	                    "isVideo":true,
+	                    "srcVideo":"../video/test1.mp4"
 	                },
 	                "right":{
 	                    "characte":"这里是you面汉字",
@@ -2023,11 +2024,15 @@
 	                    "left":{
 	                        'font-size':'16px',
 	                        'color':'#666666'
-
 	                    }
 	                },
 	                "middle":{
-
+	                    "isVideo":false,
+	                    "characte":"中间的字hiahiahiahia",
+	                    "middle":{
+	                        'font-size':'16px',
+	                        'color':'#333333'
+	                    }
 	                },
 	                "right":{
 	                    "characte":"这里是you面汉字",
@@ -2419,10 +2424,7 @@
 
 
 /***/ },
-/* 77 */,
-/* 78 */,
-/* 79 */,
-/* 80 */
+/* 77 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global, process) {/*!
@@ -12499,10 +12501,10 @@
 	}, 0);
 
 	module.exports = Vue;
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(81)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(78)))
 
 /***/ },
-/* 81 */
+/* 78 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -12627,7 +12629,7 @@
 
 
 /***/ },
-/* 82 */
+/* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*eslint-disable no-unused-vars*/
@@ -22707,7 +22709,7 @@
 
 
 /***/ },
-/* 83 */
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -22718,7 +22720,7 @@
 	* 	Released under the MIT license:
 	* 	http://www.opensource.org/licenses/mit-license.php
 	*/
-	var jquery = __webpack_require__(82);
+	var jquery = __webpack_require__(79);
 	;( function($){
 		$.fn.fsvs = function( options ) {
 			options = options || {};
@@ -23432,13 +23434,13 @@
 
 
 /***/ },
-/* 84 */
+/* 81 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 85 */
+/* 82 */
 /***/ function(module, exports, __webpack_require__) {
 
 	(function webpackUniversalModuleDefinition(root, factory) {
