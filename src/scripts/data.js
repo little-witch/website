@@ -7,6 +7,7 @@ var pageData = {
                 width:'100%',
                 "background-image": "url('../../img/Home-Slogan.JPG')",
                 "background-size":"100% 100%",
+                "min-width": "80%",
                 "-ms-interpolation-mode": "bicubic"
             },
             "top":{
@@ -27,7 +28,7 @@ var pageData = {
                     }
                 },
                 "middle":{
-                    "isVideo":true,
+                    "isVideo":'video',
                     "srcVideo":"../video/test1.mp4"
                 },
                 "right":{
@@ -53,6 +54,7 @@ var pageData = {
                 width:'100%',
                 "background-image": "url('../../img/Home-activity.JPG')",
                 "background-size":"100% 100%",
+                "min-width": "80%",
                 "-ms-interpolation-mode": "bicubic"
             },
             "top":{
@@ -72,7 +74,7 @@ var pageData = {
                     }
                 },
                 "middle":{
-                    "isVideo":false,
+                    "isPpt":'ppt',
                     "characte":"中间的字hiahiahiahia",
                     "middle":{
                         'font-size':'16px',
@@ -123,7 +125,12 @@ var pageData = {
                     }
                 },
                 "middle":{
-
+                    "isFont":'font',
+                    "characte":"中间的字hiahiahiahia",
+                    "middle":{
+                        'font-size':'16px',
+                        'color':'#333333'
+                    }
                 },
                 "right":{
                     "characte":"这里是you面汉字",
@@ -169,7 +176,12 @@ var pageData = {
                     }
                 },
                 "middle":{
-
+                    "isFont":'font',
+                    "characte":"中间的字hiahiahiahia",
+                    "middle":{
+                        'font-size':'16px',
+                        'color':'#333333'
+                    }
                 },
                 "right":{
                     "characte":"这里是you面汉字",
@@ -214,7 +226,12 @@ var pageData = {
                     }
                 },
                 "middle":{
-
+                    "isFont":'font',
+                    "characte":"中间的字hiahiahiahia",
+                    "middle":{
+                        'font-size':'16px',
+                        'color':'#333333'
+                    }
                 },
                 "right":{
                     "characte":"这里是you面汉字",
@@ -260,7 +277,12 @@ var pageData = {
                     }
                 },
                 "middle":{
-
+                    "isFont":'font',
+                    "characte":"中间的字hiahiahiahia",
+                    "middle":{
+                        'font-size':'16px',
+                        'color':'#333333'
+                    }
                 },
                 "right":{
                     "characte":"这里是you面汉字",
@@ -305,7 +327,12 @@ var pageData = {
                     }
                 },
                 "middle":{
-
+                    "isFont":'font',
+                    "characte":"中间的字hiahiahiahia",
+                    "middle":{
+                        'font-size':'16px',
+                        'color':'#333333'
+                    }
                 },
                 "right":{
                     "characte":"这里是you面汉字",
@@ -351,7 +378,12 @@ var pageData = {
                     }
                 },
                 "middle":{
-
+                    "isFont":'font',
+                    "characte":"中间的字hiahiahiahia",
+                    "middle":{
+                        'font-size':'16px',
+                        'color':'#333333'
+                    }
                 },
                 "right":{
                     "characte":"这里是you面汉字",
@@ -397,7 +429,12 @@ var pageData = {
                     }
                 },
                 "middle":{
-
+                    "isFont":'font',
+                    "characte":"中间的字hiahiahiahia",
+                    "middle":{
+                        'font-size':'16px',
+                        'color':'#333333'
+                    }
                 },
                 "right":{
                     "characte":"这里是you面汉字",
@@ -423,6 +460,7 @@ var pageData = {
                 width:'100%',
                 "background-image": "url('../../img/About.jpg')",
                 "background-size":"100% 100%",
+                "min-width": "1000px",
                 "-ms-interpolation-mode": "bicubic"
             },
             "top":{
@@ -443,7 +481,12 @@ var pageData = {
                     }
                 },
                 "middle":{
-
+                    "isFont":'font',
+                    "characte":"中间的字hiahiahiahia",
+                    "middle":{
+                        'font-size':'16px',
+                        'color':'#333333'
+                    }
                 },
                 "right":{
                     "characte":"这里是you面汉字",

@@ -509,11 +509,6 @@ html.fsvs {
       margin: 0 0 2px 0;
       cursor: pointer; }
       html.fsvs #fsvs-pagination li > span {
-        border-radius: 100%;
-        width: 22px;
-        height: 22px;
-        line-height: 22px;
-        border: 1px solid white;
         display: block; }
         html.fsvs #fsvs-pagination li > span > span {
           border-radius: 100%;
@@ -523,8 +518,6 @@ html.fsvs {
           border: 1px solid white;
           display: block;
           margin: 4px; }
-      html.fsvs #fsvs-pagination li.active > span {
-        border: 1px dashed white; }
         html.fsvs #fsvs-pagination li.active > span > span {
           background: white; }
       html.fsvs #fsvs-pagination li:last-child {
