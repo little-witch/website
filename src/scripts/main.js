@@ -44,7 +44,6 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 	/**
 	 * Created by baobao on 2016/7/25.
 	 */
@@ -134,98 +133,6 @@
 	        myPlayer.play();
 	    });
 	});
-=======
-	/**
-	 * Created by baobao on 2016/7/25.
-	 */
-	"use strict";
-	__webpack_require__(1).carousel;
-	var pageData = __webpack_require__(76);
-	var Vue = __webpack_require__(77);
-	var $jq = __webpack_require__(79);
-	__webpack_require__(80);
-	__webpack_require__(81);
-	var carousel = __webpack_require__(82).carousel;
-	var slider = __webpack_require__(82).slider;
-	var videojs = __webpack_require__(83);
-	var HEIGHT = window.screen.height-80;
-	console.log(carousel);
-	var vueVm = new Vue({
-	    el: '#content',
-	    components: {
-	        'carousel': carousel,
-	        'slider':slider
-	    },
-	    data:{
-	        interval:1000,
-	        currentPage:0,
-	        currentHeight:HEIGHT,
-	        titleList:['Servers','Product','Support','About'],
-	        imgList: pageData.imgList
-	    },
-	    methods:{
-	        choseTitle: function (index){
-	            this.currentPage = index+1;
-	            fsvs.slideToIndex(this.currentPage);
-	        }
-	    }
-	});
-	var begin = {
-	    init: function (){
-	        this.first();
-	    },
-	    first: function (){
-	        var len = vueVm.titleList.length+1;
-	        console.log( vueVm);
-	            vueVm.$children[0].isAnimating = false;
-	        for (var i = 1;i<len;i++) {
-	            vueVm.$children[i].isAnimating = true;
-	        }
-	    },
-	    slide: function (index) {
-	        var len = vueVm.titleList.length+1;
-	        for (var i = 0;i<len;i++) {
-	            vueVm.$children[i].isAnimating = true;
-	        }
-	        vueVm.$children[index].isAnimating = false;
-	    }
-	};
-	var fsvs = $jq.fn.fsvs({
-	    bodyID : 'fsvs-body',
-	    selector : '> .slide',
-	    mouseSwipeDisance : 40,
-	    afterSlide : function(){},
-	    beforeSlide : function(index){
-	        vueVm.currentPage = index;
-	        begin.slide(index);
-	    },
-	    endSlide : function(){},
-	    mouseWheelEvents : true,
-	    mouseDragEvents : true,
-	    touchEvents : true,
-	    arrowKeyEvents : true,
-	    pagination : true,
-	    nthClasses : false,
-	    detectHash : true
-	    });
-	$jq(document).ready( function() {
-	    begin.init();
-	    videojs("example_video1", {
-	        autoplay:false,
-	        controlBar: {
-	            captionsButton: false,
-	            chaptersButton : false,
-	            liveDisplay:false,
-	            subtitlesButton:false,
-	            volumeMenuButton:false
-	      }
-	    }).ready(function(){
-	        var myPlayer = this;
-	        myPlayer.play();
-	        myPlayer.volume(0);
-	    });
-	});
->>>>>>> f9826982d747da8b6b1dd2e3d66d2e446028fc28
 
 
 /***/ },
@@ -2063,7 +1970,6 @@
 /* 76 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 	var HEIGHT = window.screen.height-80;
 	var pageData = {
 	    imgList:[
@@ -2543,519 +2449,6 @@
 	    ]
 	}
 	module.exports = pageData;
-=======
-	var HEIGHT = window.screen.height-80;
-	var pageData = {
-	    imgList:[
-	        [{
-	            "styleObject":{
-	                height:HEIGHT+'px',
-	                width:'100%',
-	                "background-image": "url('../../img/Home-Slogan.JPG')",
-	                "background-size":"100% 100%",
-	                "min-width": "80%",
-	                "-ms-interpolation-mode": "bicubic"
-	            },
-	            "top":{
-	                "characte":"这里是上面汉字",
-	                "top":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            },
-	            "middle":{
-	                "left":{
-	                    "characte":"这里是左面汉字",
-	                    "left":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                },
-	                "middle":{
-	                    "isVideo":'video',
-	                    "srcVideo":"../video/test1.mp4"
-	                },
-	                "right":{
-	                    "characte":"这里是you面汉字",
-	                    "right":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                }
-	            },
-	            "bottom":{
-	                "characte":"这里是xia面汉字",
-	                "bottom":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            }
-	        },{
-	            "styleObject":{
-	                height:HEIGHT+'px',
-	                width:'100%',
-	                "background-image": "url('../../img/Home-activity.JPG')",
-	                "background-size":"100% 100%",
-	                "min-width": "80%",
-	                "-ms-interpolation-mode": "bicubic"
-	            },
-	            "top":{
-	                "characte":"这里是上面汉字",
-	                "top":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            },
-	            "middle":{
-	                "left":{
-	                    "characte":"这里是左面汉字",
-	                    "left":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-	                    }
-	                },
-	                "middle":{
-	                    "isPpt":'ppt',
-	                    "characte":"中间的字hiahiahiahia",
-	                    "middle":{
-	                        'font-size':'16px',
-	                        'color':'#333333'
-	                    }
-	                },
-	                "right":{
-	                    "characte":"这里是you面汉字",
-	                    "right":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                }
-	            },
-	            "bottom":{
-	                "characte":"这里是xia面汉字",
-	                "bottom":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            }
-	        }],
-	        [{
-	            "styleObject":{
-	                height:HEIGHT+'px',
-	                width:'100%',
-	                "background-image": "url('../../img/Services-Embedded-Development.JPG')",
-	                "background-size":"100% 100%",
-	                "-ms-interpolation-mode": "bicubic"
-	            },
-	            "top":{
-	                "characte":"这里是上面汉字",
-	                "top":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            },
-	            "middle":{
-	                "left":{
-	                    "characte":"这里是左面汉字",
-	                    "left":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                },
-	                "middle":{
-	                    "isFont":'font',
-	                    "characte":"中间的字hiahiahiahia",
-	                    "middle":{
-	                        'font-size':'16px',
-	                        'color':'#333333'
-	                    }
-	                },
-	                "right":{
-	                    "characte":"这里是you面汉字",
-	                    "right":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                }
-	            },
-	            "bottom":{
-	                "characte":"这里是xia面汉字",
-	                "bottom":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            }
-	        },
-	        {
-	            "styleObject":{
-	                height:HEIGHT+'px',
-	                width:'100%',
-	                "background-image": "url('../../img/Services-Product-Design.jpg')",
-	                "background-size":"100% 100%",
-	                "-ms-interpolation-mode": "bicubic"
-	            },
-	            "top":{
-	                "characte":"这里是上面汉字",
-	                "top":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            },
-	            "middle":{
-	                "left":{
-	                    "characte":"这里是左面汉字",
-	                    "left":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                },
-	                "middle":{
-	                    "isFont":'font',
-	                    "characte":"中间的字hiahiahiahia",
-	                    "middle":{
-	                        'font-size':'16px',
-	                        'color':'#333333'
-	                    }
-	                },
-	                "right":{
-	                    "characte":"这里是you面汉字",
-	                    "right":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                }
-	            },
-	            "bottom":{
-	                "characte":"这里是xia面汉字",
-	                "bottom":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            }
-	        },{
-	            "styleObject":{
-	                height:HEIGHT+'px',
-	                width:'100%',
-	                "background-image": "url('../../img/Services-RF-Design.jpg')",
-	                "background-size":"100% 100%",
-	                "-ms-interpolation-mode": "bicubic"
-	            },
-	            "top":{
-	                "characte":"这里是上面汉字",
-	                "top":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            },
-	            "middle":{
-	                "left":{
-	                    "characte":"这里是左面汉字",
-	                    "left":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                },
-	                "middle":{
-	                    "isFont":'font',
-	                    "characte":"中间的字hiahiahiahia",
-	                    "middle":{
-	                        'font-size':'16px',
-	                        'color':'#333333'
-	                    }
-	                },
-	                "right":{
-	                    "characte":"这里是you面汉字",
-	                    "right":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                }
-	            },
-	            "bottom":{
-	                "characte":"这里是xia面汉字",
-	                "bottom":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            }
-	        }],
-	        [{
-	            "styleObject":{
-	                height:HEIGHT+'px',
-	                width:'100%',
-	                "background-image": "url('../../img/Product-Blood-glucose.jpg')",
-	                "background-size":"100% 100%",
-	                "-ms-interpolation-mode": "bicubic"
-	            },
-	            "top":{
-	                "characte":"这里是上面汉字",
-	                "top":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            },
-	            "middle":{
-	                "left":{
-	                    "characte":"这里是左面汉字",
-	                    "left":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                },
-	                "middle":{
-	                    "isFont":'font',
-	                    "characte":"中间的字hiahiahiahia",
-	                    "middle":{
-	                        'font-size':'16px',
-	                        'color':'#333333'
-	                    }
-	                },
-	                "right":{
-	                    "characte":"这里是you面汉字",
-	                    "right":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                }
-	            },
-	            "bottom":{
-	                "characte":"这里是xia面汉字",
-	                "bottom":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            }
-	        },{
-	            "styleObject":{
-	                height:HEIGHT+'px',
-	                width:'100%',
-	                "background-image": "url('../../img/Product-HVAC.jpg')",
-	                "background-size":"100% 100%",
-	                "-ms-interpolation-mode": "bicubic"
-	            },
-	            "top":{
-	                "characte":"这里是上面汉字",
-	                "top":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            },
-	            "middle":{
-	                "left":{
-	                    "characte":"这里是左面汉字",
-	                    "left":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                },
-	                "middle":{
-	                    "isFont":'font',
-	                    "characte":"中间的字hiahiahiahia",
-	                    "middle":{
-	                        'font-size':'16px',
-	                        'color':'#333333'
-	                    }
-	                },
-	                "right":{
-	                    "characte":"这里是you面汉字",
-	                    "right":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                }
-	            },
-	            "bottom":{
-	                "characte":"这里是xia面汉字",
-	                "bottom":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            }
-	        },
-	        {
-	            "styleObject":{
-	                height:HEIGHT+'px',
-	                width:'100%',
-	                "background-image": "url('../../img/Product-More-to-Be-Continued.jpg')",
-	                "background-size":"100% 100%",
-	                "-ms-interpolation-mode": "bicubic"
-	            },
-	            "top":{
-	                "characte":"这里是上面汉字",
-	                "top":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            },
-	            "middle":{
-	                "left":{
-	                    "characte":"这里是左面汉字",
-	                    "left":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                },
-	                "middle":{
-	                    "isFont":'font',
-	                    "characte":"中间的字hiahiahiahia",
-	                    "middle":{
-	                        'font-size':'16px',
-	                        'color':'#333333'
-	                    }
-	                },
-	                "right":{
-	                    "characte":"这里是you面汉字",
-	                    "right":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                }
-	            },
-	            "bottom":{
-	                "characte":"这里是xia面汉字",
-	                "bottom":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            }
-	        }],
-	        [{
-	            "styleObject":{
-	                height:HEIGHT+'px',
-	                width:'100%',
-	                "background-image": "url('../../img/Support.jpg')",
-	                "background-size":"100% 100%",
-	                "-ms-interpolation-mode": "bicubic"
-	            },
-	            "top":{
-	                "characte":"这里是上面汉字",
-	                "top":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            },
-	            "middle":{
-	                "left":{
-	                    "characte":"这里是左面汉字",
-	                    "left":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                },
-	                "middle":{
-	                    "isFont":'font',
-	                    "characte":"中间的字hiahiahiahia",
-	                    "middle":{
-	                        'font-size':'16px',
-	                        'color':'#333333'
-	                    }
-	                },
-	                "right":{
-	                    "characte":"这里是you面汉字",
-	                    "right":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                }
-	            },
-	            "bottom":{
-	                "characte":"这里是xia面汉字",
-	                "bottom":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            }
-	        }],
-	        [{
-	            "styleObject":{
-	                height:HEIGHT+'px',
-	                width:'100%',
-	                "background-image": "url('../../img/About.jpg')",
-	                "background-size":"100% 100%",
-	                "min-width": "1000px",
-	                "-ms-interpolation-mode": "bicubic"
-	            },
-	            "top":{
-	                "characte":"",
-	                "top":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            },
-	            "middle":{
-	                "left":{
-	                    "characte":"这里是左面汉字",
-	                    "left":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                },
-	                "middle":{
-	                    "isFont":'font',
-	                    "characte":"中间的字hiahiahiahia",
-	                    "middle":{
-	                        'font-size':'16px',
-	                        'color':'#333333'
-	                    }
-	                },
-	                "right":{
-	                    "characte":"这里是you面汉字",
-	                    "right":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                }
-	            },
-	            "bottom":{
-	                "characte":"这里是xia面汉字",
-	                "bottom":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            }
-	        }]
-	    ]
-	}
-	module.exports = pageData;
->>>>>>> f9826982d747da8b6b1dd2e3d66d2e446028fc28
 
 
 /***/ },
@@ -13143,7 +12536,6 @@
 /***/ function(module, exports) {
 
 	// shim for using process in browser
-
 	var process = module.exports = {};
 
 	// cached from whatever global is present so that test runners that stub it
@@ -13155,21 +12547,63 @@
 	var cachedClearTimeout;
 
 	(function () {
-	  try {
-	    cachedSetTimeout = setTimeout;
-	  } catch (e) {
-	    cachedSetTimeout = function () {
-	      throw new Error('setTimeout is not defined');
+	    try {
+	        cachedSetTimeout = setTimeout;
+	    } catch (e) {
+	        cachedSetTimeout = function () {
+	            throw new Error('setTimeout is not defined');
+	        }
 	    }
-	  }
-	  try {
-	    cachedClearTimeout = clearTimeout;
-	  } catch (e) {
-	    cachedClearTimeout = function () {
-	      throw new Error('clearTimeout is not defined');
+	    try {
+	        cachedClearTimeout = clearTimeout;
+	    } catch (e) {
+	        cachedClearTimeout = function () {
+	            throw new Error('clearTimeout is not defined');
+	        }
 	    }
-	  }
 	} ())
+	function runTimeout(fun) {
+	    if (cachedSetTimeout === setTimeout) {
+	        //normal enviroments in sane situations
+	        return setTimeout(fun, 0);
+	    }
+	    try {
+	        // when when somebody has screwed with setTimeout but no I.E. maddness
+	        return cachedSetTimeout(fun, 0);
+	    } catch(e){
+	        try {
+	            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+	            return cachedSetTimeout.call(null, fun, 0);
+	        } catch(e){
+	            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+	            return cachedSetTimeout.call(this, fun, 0);
+	        }
+	    }
+
+
+	}
+	function runClearTimeout(marker) {
+	    if (cachedClearTimeout === clearTimeout) {
+	        //normal enviroments in sane situations
+	        return clearTimeout(marker);
+	    }
+	    try {
+	        // when when somebody has screwed with setTimeout but no I.E. maddness
+	        return cachedClearTimeout(marker);
+	    } catch (e){
+	        try {
+	            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+	            return cachedClearTimeout.call(null, marker);
+	        } catch (e){
+	            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+	            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+	            return cachedClearTimeout.call(this, marker);
+	        }
+	    }
+
+
+
+	}
 	var queue = [];
 	var draining = false;
 	var currentQueue;
@@ -13194,7 +12628,7 @@
 	    if (draining) {
 	        return;
 	    }
-	    var timeout = cachedSetTimeout.call(null, cleanUpNextTick);
+	    var timeout = runTimeout(cleanUpNextTick);
 	    draining = true;
 
 	    var len = queue.length;
@@ -13211,7 +12645,7 @@
 	    }
 	    currentQueue = null;
 	    draining = false;
-	    cachedClearTimeout.call(null, timeout);
+	    runClearTimeout(timeout);
 	}
 
 	process.nextTick = function (fun) {
@@ -13223,7 +12657,7 @@
 	    }
 	    queue.push(new Item(fun, args));
 	    if (queue.length === 1 && !draining) {
-	        cachedSetTimeout.call(null, drainQueue, 0);
+	        runTimeout(drainQueue);
 	    }
 	};
 
