@@ -56,7 +56,7 @@
 	__webpack_require__(81);
 	var carousel = __webpack_require__(82).carousel;
 	var slider = __webpack_require__(82).slider;
-	var videojs = __webpack_require__(84);
+	var videojs = __webpack_require__(83);
 	var HEIGHT = window.screen.height-80;
 	console.log(carousel);
 	var vueVm = new Vue({
@@ -126,12 +126,11 @@
 	            chaptersButton : false,
 	            liveDisplay:false,
 	            subtitlesButton:false,
-	            volumeMenuButton:false
+	            volumeMenuButton:true
 	      }
 	    }).ready(function(){
 	        var myPlayer = this;
 	        myPlayer.play();
-	        myPlayer.volume(0);
 	    });
 	});
 
@@ -1983,42 +1982,10 @@
 	                "min-width": "80%",
 	                "-ms-interpolation-mode": "bicubic"
 	            },
-	            "top":{
-	                "characte":"这里是上面汉字",
-	                "top":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
-	                }
-	            },
 	            "middle":{
-	                "left":{
-	                    "characte":"这里是左面汉字",
-	                    "left":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                },
 	                "middle":{
 	                    "isVideo":'video',
 	                    "srcVideo":"../video/test1.mp4"
-	                },
-	                "right":{
-	                    "characte":"这里是you面汉字",
-	                    "right":{
-	                        'font-size':'16px',
-	                        'color':'#666666'
-
-	                    }
-	                }
-	            },
-	            "bottom":{
-	                "characte":"这里是xia面汉字",
-	                "bottom":{
-	                    'font-size':'16px',
-	                    'color':'#666666'
-
 	                }
 	            }
 	        },{
@@ -29483,8 +29450,7 @@
 	//# sourceMappingURL=vue-strap.js.map
 
 /***/ },
-/* 83 */,
-/* 84 */
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var require;var require;/* WEBPACK VAR INJECTION */(function(global) {/**

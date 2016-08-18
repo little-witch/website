@@ -30,29 +30,29 @@
             <carousel class="home" v-bind:style="{height:currentHeight+'px'}" :interval="7000">
                 <slider v-for="backImg in item"  v-bind:style="backImg.styleObject">
                     <div class="body-content">
-                        <div class="topClass" v-bind:style="backImg.top.top">
-                            {{backImg.top.characte}}
-                        </div>
+                        <!--<div class="topClass" v-bind:style="backImg.top.top">-->
+                            <!--{{backImg.top.characte}}-->
+                        <!--</div>-->
                         <div class="middle middle">
-                            <div class="leftClass" v-bind:style="backImg.middle.left.left">
-                                {{backImg.middle.left.characte}}
-                            </div>
+                            <!--<div class="leftClass" v-bind:style="backImg.middle.left.left">-->
+                                <!--{{backImg.middle.left.characte}}-->
+                            <!--</div>-->
                             <div class="middleClass middle">
                                 <video v-if="backImg.middle.middle.isVideo==='video'" id="example_video1" class="video-js vjs-default-skin vjs-big-play-centered" controls width="800" height="450" poster="../img/videoImg.jpeg">
                                  <source v-bind:src="backImg.middle.middle.srcVideo" type='video/mp4'/>
                                 </video>
-                                <iframe v-if="backImg.middle.middle.isPpt==='ppt'" src="http://slides.com/guanlingjuan/deck/fullscreen" frameborder="0" class="iframeClass"></iframe>
+                                <iframe v-if="backImg.middle.middle.isPpt==='ppt'" src="http://slides.com/guanlingjuan/fds/fullscreen" frameborder="0" class="iframeClass"></iframe>
                                 <div v-if="backImg.middle.middle.isFont==='font'" v-bind:style="backImg.middle.middle.middle">
                                     {{backImg.middle.middle.characte}}
                                 </div>
                             </div>
-                            <div class="rightClass" v-bind:style="backImg.middle.right.right">
-                                {{backImg.middle.right.characte}}
-                            </div>
+                            <!--<div class="rightClass" v-bind:style="backImg.middle.right.right">-->
+                                <!--{{backImg.middle.right.characte}}-->
+                            <!--</div>-->
                         </div>
-                        <div class="bottomClass" v-bind:style="backImg.bottom.bottom">
-                            {{backImg.bottom.characte}}
-                        </div>
+                        <!--<div class="bottomClass" v-bind:style="backImg.bottom.bottom">-->
+                            <!--{{backImg.bottom.characte}}-->
+                        <!--</div>-->
                     </div>
                 </slider>
             </carousel>

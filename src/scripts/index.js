@@ -80,11 +80,10 @@ $jq(document).ready( function() {
             chaptersButton : false,
             liveDisplay:false,
             subtitlesButton:false,
-            volumeMenuButton:false
+            volumeMenuButton:true
       }
     }).ready(function(){
         var myPlayer = this;
         myPlayer.play();
-        myPlayer.volume(0);
     });
 });

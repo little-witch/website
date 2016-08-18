@@ -10,42 +10,10 @@ var pageData = {
                 "min-width": "80%",
                 "-ms-interpolation-mode": "bicubic"
             },
-            "top":{
-                "characte":"这里是上面汉字",
-                "top":{
-                    'font-size':'16px',
-                    'color':'#666666'
-
-                }
-            },
             "middle":{
-                "left":{
-                    "characte":"这里是左面汉字",
-                    "left":{
-                        'font-size':'16px',
-                        'color':'#666666'
-
-                    }
-                },
                 "middle":{
                     "isVideo":'video',
                     "srcVideo":"../video/test1.mp4"
-                },
-                "right":{
-                    "characte":"这里是you面汉字",
-                    "right":{
-                        'font-size':'16px',
-                        'color':'#666666'
-
-                    }
-                }
-            },
-            "bottom":{
-                "characte":"这里是xia面汉字",
-                "bottom":{
-                    'font-size':'16px',
-                    'color':'#666666'
-
                 }
             }
         },{
