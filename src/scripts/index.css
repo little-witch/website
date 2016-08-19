@@ -25,7 +25,7 @@
           height: 40px;
           background-position: 0 0;
           background-repeat: no-repeat;
-          background-image: url(https://t.alipayobjects.com/images/T1HHFgXXVeXXXXXXXX.png); }
+          background-image: url(http://maddog-static.oss-cn-qingdao.aliyuncs.com/logo.png); }
         .header .am-header-inner .mainNav .laymid .mainMenu {
           height: 80px;
           margin-left: 360px; }
@@ -42,6 +42,11 @@
               padding: 0 30px; }
               .header .am-header-inner .mainNav .laymid .mainMenu .channel .channel-a:hover {
                 color: #00bbee; }
+          .header .am-header-inner .mainNav .laymid .mainMenu .language {
+            font-size: 12px;
+            position: absolute;
+            left: 75%;
+            cursor: pointer; }
           .header .am-header-inner .mainNav .laymid .mainMenu .on .channel-a {
             color: #00bbee; }
 
@@ -57,6 +62,13 @@
   width: 800px;
   height: 450px; }
 
+.body .videoClass {
+  margin: auto; }
+
+.body .floatLocate {
+  position: absolute;
+  color: #ffffff; }
+
 .body .body-content {
   margin: auto;
   position: absolute;
@@ -69,18 +81,12 @@
     padding: 0 20%;
     text-align: center; }
   .body .body-content .middle {
-    display: flex; }
-    .body .body-content .middle .leftClass {
-      flex: 1; }
+    text-align: center; }
     .body .body-content .middle .middleClass {
-      padding: 10px;
-      flex: 4; }
+      padding: 10px; }
       .body .body-content .middle .middleClass .video-js {
         width: 800px;
         height: 450px; }
-    .body .body-content .middle .rightClass {
-      flex: 1;
-      text-align: right; }
   .body .body-content .bottomClass {
     padding: 0 20%;
     text-align: center; }

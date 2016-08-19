@@ -8,8 +8,11 @@ html{
 	-webkit-text-size-adjust:100%;
 	-ms-text-size-adjust:100%;
 	font-size:62.5%;/*相当于10px*/
+	font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", sans-serif;
 	}
-
+	[v-cloak] {
+	  display: none;
+	}
 html *{
 	tap-highlight-color:rgba(0,0,0,.05);/*ios的Safari浏览器的链接点击时的效果*/
 	-webkit-tap-highlight-color:rgba(0,0,0,.05);
@@ -22,8 +25,6 @@ body{
 	font-family:"微软雅黑";
 	}
 img{-ms-interpolation-mode:bicubic;width:100%;}
-
-
 /*首页banner*/
 @keyframes scal{
 	from{-webkit-transform: scale(1,1);}

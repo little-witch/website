@@ -2,12 +2,26 @@
 <html class="fsvs">
 <head>
     <meta charset="UTF-8">
-    <title>title</title>
+    <title>Maddog</title>
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../scripts/index.css">
     <link href="../styles/fsvs.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="../styles/video.css" rel="stylesheet">
 </head>
+
+    <style type="text/css">
+        #content {
+          width: 0px;
+            height: 0px;
+            border: 100px;
+            border-style: solid;
+            border-color:red transparent transparent;;
+            display: inline;
+        }
+    </style>
+
+<div id="content"></div>
+
 <body id="content">
     <div class="header">
         <div class="am-header-inner">
@@ -15,11 +29,32 @@
                 <div class="laymid">
                     <div class="alipay-logo"></div>
                     <div id="J_mainMenu" class="mainMenu">
-                        <ul>
-                            <li class="channel" v-bind:class="{'on':$index+1===currentPage}" v-for="title in titleList">
+                        <!-- <ul v-if="!isChinese" id="defaultData">
+                            <li class="channel">
+                                <a class="channel-a"  href="javascript:;">服务</a>
+                            </li>
+                            <li class="channel">
+                                <a class="channel-a"  href="javascript:;">产品</a>
+                            </li>
+                            <li class="channel">
+                                <a class="channel-a"  href="javascript:;">支持</a>
+                            </li>
+                            <li class="channel">
+                                <a class="channel-a"  href="javascript:;">关于</a>
+                            </li>
+                        </ul> -->
+                        <ul v-if="isChinese">
+                            <li class="channel" v-cloak v-bind:class="{'on':$index+1===currentPage}" v-for="title in titleListChina">
                                 <a class="channel-a" v-on:click="choseTitle($index)" href="javascript:;">{{title}}</a>
                             </li>
                         </ul>
+                        <ul v-else>
+                            <li class="channel" v-cloak v-bind:class="{'on':$index+1===currentPage}" v-for="title in titleList">
+                                <a class="channel-a" v-on:click="choseTitle($index)" href="javascript:;">{{title}}</a>
+                            </li>
+                        </ul>
+                      <span class="language" v-cloak v-if="isChinese" v-on:click="changeLanguage(false)">English</span>
+                      <span class="language" v-cloak v-else v-on:click="changeLanguage(true)">中文</span>
                     </div>
                 </div>
             </div>
@@ -29,30 +64,34 @@
         <div class="slide" v-for="item in imgList">
             <carousel class="home" v-bind:style="{height:currentHeight+'px'}" :interval="7000">
                 <slider v-for="backImg in item"  v-bind:style="backImg.styleObject">
+                    <div v-if="!!backImg.left" class="floatLocate" v-bind:style="backImg.left.locate">
+                        <p v-if="isChinese">
+                          {{backImg.left.characte}}
+                        </p>
+                        <p v-else>
+                          {{backImg.left.characteEnglish}}
+                        </p>
+                    </div>
+                    <div v-if="!!backImg.right" class="floatLocate" v-bind:style="backImg.right.locate">
+                        <p v-if="isChinese">
+                          {{backImg.right.characte}}
+                        </p>
+                        <p v-else>
+                          {{backImg.right.characteEnglish}}
+                        </p>
+                    </div>
                     <div class="body-content">
-                        <!--<div class="topClass" v-bind:style="backImg.top.top">-->
-                            <!--{{backImg.top.characte}}-->
-                        <!--</div>-->
                         <div class="middle middle">
-                            <!--<div class="leftClass" v-bind:style="backImg.middle.left.left">-->
-                                <!--{{backImg.middle.left.characte}}-->
-                            <!--</div>-->
                             <div class="middleClass middle">
-                                <video v-if="backImg.middle.middle.isVideo==='video'" id="example_video1" class="video-js vjs-default-skin vjs-big-play-centered" controls width="800" height="450" poster="../img/videoImg.jpeg">
-                                 <source v-bind:src="backImg.middle.middle.srcVideo" type='video/mp4'/>
+                                <video v-if="backImg.middle.isVideo==='video'" id="example_video1" class="video-js vjs-default-skin vjs-big-play-centered videoClass" controls width="800" height="450" v-bind:poster="backImg.middle.picVideo">
+                                 <source v-bind:src="backImg.middle.srcVideo" type='video/mp4'/>
                                 </video>
-                                <iframe v-if="backImg.middle.middle.isPpt==='ppt'" src="http://slides.com/guanlingjuan/fds/fullscreen" frameborder="0" class="iframeClass"></iframe>
-                                <div v-if="backImg.middle.middle.isFont==='font'" v-bind:style="backImg.middle.middle.middle">
-                                    {{backImg.middle.middle.characte}}
+                                <iframe v-if="backImg.middle.isPpt==='ppt'" v-bind:src="backImg.middle.srcPpt" frameborder="0" class="iframeClass"></iframe>
+                                <div v-if="backImg.middle.isFont==='font'" v-bind:style="backImg.middle.middle.middle">
+                                    {{backImg.middle.characte}}
                                 </div>
                             </div>
-                            <!--<div class="rightClass" v-bind:style="backImg.middle.right.right">-->
-                                <!--{{backImg.middle.right.characte}}-->
-                            <!--</div>-->
                         </div>
-                        <!--<div class="bottomClass" v-bind:style="backImg.bottom.bottom">-->
-                            <!--{{backImg.bottom.characte}}-->
-                        <!--</div>-->
                     </div>
                 </slider>
             </carousel>

@@ -29,7 +29,7 @@
           height: 40px;
           background-position: 0 0;
           background-repeat: no-repeat;
-          background-image: url(https://t.alipayobjects.com/images/T1HHFgXXVeXXXXXXXX.png);
+          background-image: url(http://maddog-static.oss-cn-qingdao.aliyuncs.com/logo.png);
         }
 
         .mainMenu {
@@ -53,6 +53,12 @@
               }
             }
           }
+          .language {
+            font-size: 12px;
+            position: absolute;
+            left:75%;
+            cursor: pointer;
+          }
           .on {
             .channel-a{
               color: #00bbee;
@@ -63,7 +69,6 @@
     }
   }
 }
-
 .body {
   .services {
       width: 100%;
@@ -76,6 +81,13 @@
   .iframeClass {
     width: 800px;
     height: 450px;
+  }
+  .videoClass {
+    margin: auto;
+  }
+  .floatLocate{
+    position: absolute;
+    color: #ffffff;
   }
   .body-content{
       margin: auto;
@@ -90,22 +102,13 @@
           text-align: center;
       }
       .middle{
-          display: flex;
-
-          .leftClass{
-              flex: 1;
-          }
+          text-align: center;
           .middleClass{
               padding: 10px;
-              flex: 4;
               .video-js{
                   width: 800px;
                   height:450px;
               }
-          }
-          .rightClass{
-               flex: 1;
-               text-align: right;
           }
       }
 
